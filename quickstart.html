@@ -1,472 +1,183 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAD Poker 퀵스타트 가이드</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-        
-        h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 5px solid #667eea;
-        }
-        
-        h3 {
-            color: #333;
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        .image-container {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 2px dashed #ddd;
-        }
-        
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .image-caption {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
-        }
-        
-        .tip-box {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #ffc107;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .step-box {
-            background: linear-gradient(135deg, #e8f0fe 0%, #d0e7ff 100%);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #1a73e8;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 35px;
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.1em;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .feature-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        
-        .feature-card h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-        
-        .feature-card p {
-            text-align: center;
-            color: #555;
-        }
-        
-        .highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        
-        .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #667eea, transparent);
-            margin: 40px 0;
-        }
-        
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid #ddd;
-            text-align: center;
-            color: #666;
-        }
-        
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>DAD Poker - 퀵스타트 가이드</title>
+    <link rel="icon" href="images/icon_small.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>🚀 DAD Poker 퀵스타트 가이드</h1>
-        <p class="subtitle">5분 안에 앱의 주요 기능을 익혀보세요!</p>
-        
-        <section>
-            <h2>📱 앱 시작하기</h2>
-            
-            <h3>1단계: 로그인 또는 회원가입</h3>
-            <p>앱을 실행하면 로그인 화면이 나타납니다.</p>
-            
+    <!-- Navigation Bar -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <header>
+            <h1>🚀 DAD Poker 퀵스타트 가이드</h1>
+            <p class="subtitle">5분 안에 앱의 주요 기능을 익혀보세요!</p>
+        </header>
+
+        <div class="content-section">
+            <h2>1. 로그인하기</h2>
+            <p>앱을 처음 실행하면 로그인 화면이 나타납니다.</p>
+            <ol>
+                <li>구글 또는 애플 계정으로 간편 로그인</li>
+                <li>프로필 설정 (닉네임, 프로필 사진)</li>
+            </ol>
             <div class="image-container">
-                <img src="images/quickstart_login.png" alt="로그인 화면">
+                <img src="images/quickstart_login.png" alt="로그인 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="image-caption">그림 1: 로그인 화면</div>
             </div>
-            
-            <div class="step-box">
-                <h4>회원가입 방법</h4>
-                <ul style="list-style: none; margin-left: 0;">
-                    <li><span class="step-number">1</span> <strong>이메일과 비밀번호</strong>로 가입</li>
-                    <li><span class="step-number">2</span> <strong>Google 계정</strong>으로 간편 가입</li>
-                    <li><span class="step-number">3</span> <strong>Apple ID</strong>로 가입 (iOS)</li>
-                </ul>
-            </div>
-            
-            <div class="tip-box">
-                <strong>💡 팁:</strong> 회원가입 시 <span class="highlight">600 DAD머니</span>가 자동으로 지급됩니다!
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>🏠 메인 화면 둘러보기</h2>
-            
-            <p>로그인 후 메인 화면이 나타납니다. 하단에 5개의 메뉴가 있습니다:</p>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>2. 대시보드 둘러보기</h2>
+            <p>로그인 후 메인 대시보드에서 모든 주요 기능에 접근할 수 있습니다.</p>
+            <ul>
+                <li><strong>뱅크롤</strong>: 자금 관리 및 통계</li>
+                <li><strong>스터디</strong>: 학습 패키지 탐색</li>
+                <li><strong>도구</strong>: 확률 계산기, ICM 등</li>
+                <li><strong>커뮤니티</strong>: 게시판 및 소통</li>
+            </ul>
             <div class="image-container">
-                <img src="images/quickstart_main.png" alt="메인 화면">
-                <div class="image-caption">그림 2: 메인 화면</div>
+                <img src="images/quickstart_main.png" alt="메인 대시보드"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <div class="image-caption">그림 2: 메인 대시보드</div>
             </div>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>🏠 홈</h4>
-                    <p>대시보드<br>(전체 요약)</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💰 뱅크롤</h4>
-                    <p>자금 관리</p>
-                </div>
-                <div class="feature-card">
-                    <h4>📚 스터디</h4>
-                    <p>학습 자료</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🛠️ 도구</h4>
-                    <p>포커 계산기</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💬 커뮤니티</h4>
-                    <p>게시판</p>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>🎯 주요 기능 빠르게 익히기</h2>
-            
-            <h3>💰 뱅크롤 관리 (2분)</h3>
-            <div class="step-box">
-                <ol style="list-style: none; margin-left: 0;">
-                    <li><span class="step-number">1</span> <strong>뱅크롤</strong> 메뉴 클릭</li>
-                    <li><span class="step-number">2</span> <strong>+</strong> 버튼으로 새 뱅크롤 추가</li>
-                    <li><span class="step-number">3</span> 이름과 초기 자금 입력</li>
-                    <li><span class="step-number">4</span> 게임 결과를 기록하여 자금 추적</li>
-                </ol>
-            </div>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>3. 뱅크롤 기록하기</h2>
+            <p>게임 결과를 기록하여 수익을 추적할 수 있습니다.</p>
+            <ol>
+                <li>뱅크롤 탭 선택</li>
+                <li>우측 상단 <strong>+</strong> 버튼 클릭</li>
+                <li>게임 정보 입력 (금액, 날짜, 메모)</li>
+                <li><strong>저장</strong> 클릭</li>
+            </ol>
             <div class="image-container">
-                <img src="images/quickstart_bankroll.png" alt="뱅크롤 추가">
-                <div class="image-caption">그림 3: 뱅크롤 추가 화면</div>
+                <img src="images/quickstart_bankroll.png" alt="뱅크롤 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <div class="image-caption">그림 3: 뱅크롤 화면</div>
             </div>
-            
-            <div class="divider"></div>
-            
-            <h3>📚 스터디 시작하기 (2분)</h3>
-            <div class="step-box">
-                <ol style="list-style: none; margin-left: 0;">
-                    <li><span class="step-number">1</span> <strong>스터디</strong> 메뉴 클릭</li>
-                    <li><span class="step-number">2</span> 원하는 학습 패키지 선택</li>
-                    <li><span class="step-number">3</span> <strong>구매하기</strong> 버튼 클릭 (DAD머니 사용)</li>
-                    <li><span class="step-number">4</span> <strong>자료 보기</strong>로 학습 시작</li>
-                </ol>
-            </div>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>4. 학습 자료 탐색하기</h2>
+            <p>스터디 탭에서 포커 학습 패키지를 둘러보세요.</p>
+            <ul>
+                <li><strong>공식 패키지</strong>: 검증된 전문 콘텐츠</li>
+                <li><strong>사용자 제작</strong>: 커뮤니티 공유 자료</li>
+                <li>DAD머니로 구매하여 오프라인에서도 학습 가능</li>
+            </ul>
             <div class="image-container">
-                <img src="images/quickstart_study.png" alt="스터디 구매">
-                <div class="image-caption">그림 4: 스터디 구매 화면</div>
+                <img src="images/quickstart_study.png" alt="스터디 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <div class="image-caption">그림 4: 스터디 화면</div>
             </div>
-            
-            <div class="tip-box">
-                <strong>💡 팁:</strong> "공식" 탭에서 무료 학습 자료도 확인해보세요!
-            </div>
-            
-            <div class="divider"></div>
-            
-            <h3>🛠️ 도구 사용하기 (1분)</h3>
-            <div class="step-box">
-                <ol style="list-style: none; margin-left: 0;">
-                    <li><span class="step-number">1</span> <strong>도구</strong> 메뉴 클릭</li>
-                    <li><span class="step-number">2</span> 원하는 계산기 선택</li>
-                </ol>
-            </div>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>5. 도구 활용하기</h2>
+            <p>포커 계산에 필요한 다양한 도구를 활용하세요.</p>
+            <ul>
+                <li>확률 계산기</li>
+                <li>올인 EV 계산기</li>
+                <li>ICM 계산기</li>
+                <li>GTO 차트</li>
+            </ul>
             <div class="image-container">
-                <img src="images/quickstart_tools.png" alt="도구 화면">
+                <img src="images/quickstart_tools.png" alt="도구 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="image-caption">그림 5: 도구 화면</div>
             </div>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>📊 확률 계산기</h4>
-                    <p>핸드 승률 계산</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🎯 ICM 계산기</h4>
-                    <p>토너먼트 가치 계산</p>
-                </div>
-                <div class="feature-card">
-                    <h4>📈 GTO 차트</h4>
-                    <p>최적 전략 분석</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🎴 아웃츠 계산</h4>
-                    <p>아웃 카드 분석</p>
-                </div>
-                <div class="feature-card">
-                    <h4>💎 올인 계산기</h4>
-                    <p>팟 분배 계산</p>
-                </div>
-                <div class="feature-card">
-                    <h4>📉 ROI 계산기</h4>
-                    <p>수익률 계산</p>
-                </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <h3>💬 커뮤니티 참여하기 (1분)</h3>
-            <div class="step-box">
-                <ol style="list-style: none; margin-left: 0;">
-                    <li><span class="step-number">1</span> <strong>커뮤니티</strong> 메뉴 클릭</li>
-                    <li><span class="step-number">2</span> 게시글을 읽고 댓글 작성</li>
-                    <li><span class="step-number">3</span> <strong>+</strong> 버튼으로 새 게시글 작성</li>
-                    <li><span class="step-number">4</span> 다른 사용자와 정보 공유</li>
-                </ol>
-            </div>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>6. 커뮤니티 참여하기</h2>
+            <p>다른 플레이어들과 소통하고 경험을 공유하세요.</p>
+            <ul>
+                <li>게시글 작성 및 댓글</li>
+                <li>다른 사용자와 메시지</li>
+                <li>핸드 히스토리 공유</li>
+            </ul>
             <div class="image-container">
-                <img src="images/quickstart_community.png" alt="커뮤니티 화면">
+                <img src="images/quickstart_community.png" alt="커뮤니티 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="image-caption">그림 6: 커뮤니티 화면</div>
             </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>⚙️ 설정 확인하기</h2>
-            
-            <p>상단 오른쪽 <strong>⚙️ 설정</strong> 버튼을 클릭하면:</p>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>7. 설정 확인하기</h2>
+            <p>설정에서 앱을 개인화하고 계정을 관리하세요.</p>
             <ul>
-                <li>프로필 및 DAD머니 확인</li>
-                <li>테마 변경 (구독 필요)</li>
+                <li>테마 변경 (다크/라이트 모드)</li>
+                <li>알림 설정</li>
                 <li>구독 관리</li>
-                <li>계정 설정</li>
+                <li>계정 정보</li>
             </ul>
-            
             <div class="image-container">
-                <img src="images/quickstart_settings.png" alt="설정 화면">
+                <img src="images/quickstart_settings.png" alt="설정 화면"
+                    style="max-width: 400px; margin: 2rem auto; display: block; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="image-caption">그림 7: 설정 화면</div>
             </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>🎓 다음 단계</h2>
-            
-            <p>이제 기본 기능을 익히셨습니다! 더 자세한 내용은:</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>📖 앱 내 메뉴얼</h4>
-                    <p>설정 > 앱 정보 ><br>사용자 설명서</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🌐 웹사이트</h4>
-                    <p><a href="https://dadpoker.kr" style="color: #667eea;">dadpoker.kr</a></p>
-                </div>
-            </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
+        </div>
+
+        <div class="content-section">
             <h2>💡 빠른 팁</h2>
-            
             <div class="tip-box">
-                <ul style="list-style: none; margin-left: 0;">
+                <ul class="clean-list">
                     <li>✅ <strong>DAD머니 관리</strong>: 학습 자료 구매에 신중하게 사용하세요</li>
                     <li>✅ <strong>오프라인 학습</strong>: 구매한 패키지는 오프라인에서도 볼 수 있습니다</li>
                     <li>✅ <strong>뱅크롤 기록</strong>: 게임 후 즉시 기록하면 정확한 분석이 가능합니다</li>
                     <li>✅ <strong>커뮤니티 활용</strong>: 다른 플레이어의 경험을 공유하고 배우세요</li>
                 </ul>
             </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <section>
-            <h2>❓ 도움이 필요하신가요?</h2>
-            
+        </div>
+
+        <div class="content-section">
+            <h2>📚 더 알아보기</h2>
+            <p>더 자세한 내용은 다음을 참고하세요:</p>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h4>📱 앱 내 문의</h4>
-                    <p>설정 > 앱 정보</p>
+                    <h4>📖 사용자 가이드</h4>
+                    <p><a href="user_manual.html" class="text-accent">전체 사용자 가이드 보기</a></p>
                 </div>
                 <div class="feature-card">
-                    <h4>📧 이메일</h4>
-                    <p><a href="mailto:help@suparain.com" style="color: #667eea;">help@suparain.com</a></p>
+                    <h4>📖 앱 내 메뉴얼</h4>
+                    <p>설정 > 앱 정보 ><br>사용자 설명서</p>
                 </div>
                 <div class="feature-card">
                     <h4>🌐 웹사이트</h4>
-                    <p><a href="https://dadpoker.kr" style="color: #667eea;">dadpoker.kr</a></p>
+                    <p><a href="https://dadpoker.kr" class="text-accent">dadpoker.kr</a></p>
                 </div>
             </div>
-        </section>
-        
-        <div class="divider"></div>
-        
-        <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white;">
-            <h2 style="color: white; border: none; padding: 0; margin: 0 0 10px 0;">DAD Poker와 함께 포커 실력을 향상시켜보세요! 🎰</h2>
         </div>
-        
-        <div class="footer">
-            <p><strong>DAD Poker v1.0.0</strong></p>
-            <p>© 2025 SUPARAIN Inc. All rights reserved.</p>
-            <p style="margin-top: 20px;">
-                <strong>작성일</strong>: 2025-11-14 | 
-                <strong>최종 수정일</strong>: 2025-11-14 | 
-                <strong>버전</strong>: 1.0.0
+
+        <div class="content-section">
+            <h2>❓ 도움이 필요하신가요?</h2>
+            <p>문의사항이 있으시면 <a href="mailto:help@suparain.com" class="text-accent">help@suparain.com</a>으로 연락주세요.</p>
+            <p class="date-info">
+                <strong>작성일</strong>: 2025-11-14 |
+                <strong>최종 수정일</strong>: 2025-12-03 |
+                <strong>버전</strong>: 1.0.1
             </p>
+            <p class="back-link"><a href="index.html">← 메인으로 돌아가기</a></p>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/common.js"></script>
 </body>
+
 </html>
