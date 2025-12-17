@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.suparain.dadp",
+      "sha256_cert_fingerprints": [
+        "BB:C2:F5:64:86:90:6E:EA:AC:84:78:57:E9:90:81:1E:D5:A7:CA:44:4B:C3:D5:4C:B2:35:D8:FB:02:5D:23:AB"
+      ]
+    }
+  }
+]
